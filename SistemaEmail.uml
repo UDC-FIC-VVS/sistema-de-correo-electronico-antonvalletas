@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>gal.udc.fic.vvs.email</OriginalElement>
+  <nodes>
+    <node x="960.0" y="2267.0">gal.udc.fic.vvs.email.correo.OperacionInvalida</node>
+    <node x="1512.0" y="2267.0">gal.udc.fic.vvs.email.App</node>
+    <node x="1151.0" y="2114.5">gal.udc.fic.vvs.email.cliente.ClienteImp.ActionBuscar</node>
+    <node x="1638.75" y="488.0">gal.udc.fic.vvs.email.archivador.Delegado</node>
+    <node x="643.0" y="2267.0">gal.udc.fic.vvs.email.cliente.PopupListener</node>
+    <node x="601.0" y="2101.5">gal.udc.fic.vvs.email.cliente.ClienteImp.CorreoItem</node>
+    <node x="561.75" y="965.5">gal.udc.fic.vvs.email.correo.MensajeAbstracto</node>
+    <node x="1336.75" y="513.0">gal.udc.fic.vvs.email.archivador.Log</node>
+    <node x="2044.0" y="2114.5">gal.udc.fic.vvs.email.cliente.ClienteImp.ActionEstablecerArchivadorDelegado</node>
+    <node x="2384.0" y="2114.5">gal.udc.fic.vvs.email.cliente.ClienteImp.ActionRaizExplorador</node>
+    <node x="757.75" y="789.0">gal.udc.fic.vvs.email.correo.CarpetaLimitada</node>
+    <node x="403.0" y="2474.0">gal.udc.fic.vvs.email.archivo.Imagen</node>
+    <node x="1800.25" y="231.0">gal.udc.fic.vvs.email.archivador.ArchivadorSimple</node>
+    <node x="664.125" y="1296.0">gal.udc.fic.vvs.email.correo.Mensaje</node>
+    <node x="1642.25" y="0.0">gal.udc.fic.vvs.email.archivador.Archivador</node>
+    <node x="1229.0" y="2267.0">gal.udc.fic.vvs.email.AppTest</node>
+    <node x="785.25" y="532.0">gal.udc.fic.vvs.email.correo.CorreoAbstracto</node>
+    <node x="338.125" y="1221.0">gal.udc.fic.vvs.email.correo.DecoradorMensaje</node>
+    <node x="1034.75" y="814.0">gal.udc.fic.vvs.email.correo.Carpeta</node>
+    <node x="2679.0" y="2114.5">gal.udc.fic.vvs.email.cliente.ClienteImp.ActionArchivar</node>
+    <node x="200.0" y="2474.0">gal.udc.fic.vvs.email.archivo.Audio</node>
+    <node x="356.0" y="1653.0">gal.udc.fic.vvs.email.correo.Adjunto</node>
+    <node x="804.0" y="2114.5">gal.udc.fic.vvs.email.cliente.ClienteImp.ActionCambiarMarcaDeLectura</node>
+    <node x="1446.0" y="2114.5">gal.udc.fic.vvs.email.cliente.ClienteImp.CorreoRenderer</node>
+    <node x="0.0" y="2474.0">gal.udc.fic.vvs.email.archivo.Texto</node>
+    <node x="1484.25" y="231.0">gal.udc.fic.vvs.email.archivador.DecoradorArchivador</node>
+    <node x="662.0" y="1653.0">gal.udc.fic.vvs.email.correo.Reenvio</node>
+    <node x="163.0" y="2267.0">gal.udc.fic.vvs.email.archivo.Archivo</node>
+    <node x="0.0" y="1653.0">gal.udc.fic.vvs.email.correo.Cabecera</node>
+    <node x="1145.0" y="1911.0">gal.udc.fic.vvs.email.cliente.ClienteImp</node>
+    <node x="679.25" y="0.0">gal.udc.fic.vvs.email.correo.Correo</node>
+    <node x="306.0" y="2114.5">gal.udc.fic.vvs.email.cliente.ClienteImp.ActionConsultarEstadoCadena</node>
+    <node x="1145.0" y="1805.0">gal.udc.fic.vvs.email.cliente.Cliente</node>
+    <node x="0.0" y="2089.0">gal.udc.fic.vvs.email.cliente.ClienteImp.ArchivadorItem</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="gal.udc.fic.vvs.email.correo.MensajeAbstracto" target="gal.udc.fic.vvs.email.correo.CorreoAbstracto">
+      <point x="0.0" y="-14.5" />
+      <point x="649.75" y="764.0" />
+      <point x="818.9166666666666" y="764.0" />
+      <point x="-67.33333333333337" y="103.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.cliente.ClienteImp.ActionCambiarMarcaDeLectura" target="gal.udc.fic.vvs.email.cliente.ClienteImp">
+      <point x="0.0" y="-41.0" />
+      <point x="967.5" y="2069.0" />
+      <point x="1256.611111111111" y="2069.0" />
+      <point x="-31.888888888888914" y="54.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.correo.Cabecera" target="gal.udc.fic.vvs.email.correo.DecoradorMensaje">
+      <point x="0.0" y="-53.5" />
+      <point x="168.0" y="1628.0" />
+      <point x="389.125" y="1628.0" />
+      <point x="-102.0" y="191.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.archivador.ArchivadorSimple" target="gal.udc.fic.vvs.email.archivador.Archivador">
+      <point x="0.0" y="-103.5" />
+      <point x="1948.25" y="206.0" />
+      <point x="1864.25" y="206.0" />
+      <point x="74.0" y="90.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.correo.Adjunto" target="gal.udc.fic.vvs.email.correo.DecoradorMensaje">
+      <point x="0.0" y="-53.5" />
+      <point x="499.0" y="1628.0" />
+      <point x="491.125" y="1628.0" />
+      <point x="0.0" y="191.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.correo.Carpeta" target="gal.udc.fic.vvs.email.correo.CorreoAbstracto">
+      <point x="0.0" y="-166.0" />
+      <point x="1163.25" y="764.0" />
+      <point x="953.5833333333333" y="764.0" />
+      <point x="67.33333333333326" y="103.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.archivador.DecoradorArchivador" target="gal.udc.fic.vvs.email.archivador.Archivador">
+      <point x="0.0" y="-103.5" />
+      <point x="1632.25" y="206.0" />
+      <point x="1716.25" y="206.0" />
+      <point x="-74.0" y="90.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.archivador.Delegado" target="gal.udc.fic.vvs.email.archivador.DecoradorArchivador">
+      <point x="0.0" y="-66.0" />
+      <point x="1786.75" y="463.0" />
+      <point x="1706.25" y="463.0" />
+      <point x="74.0" y="103.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.archivo.Audio" target="gal.udc.fic.vvs.email.archivo.Archivo">
+      <point x="0.0" y="-28.0" />
+      <point x="0.0" y="78.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.cliente.ClienteImp.CorreoRenderer" target="gal.udc.fic.vvs.email.cliente.ClienteImp">
+      <point x="0.0" y="-41.0" />
+      <point x="1735.0" y="2069.0" />
+      <point x="1320.388888888889" y="2069.0" />
+      <point x="31.888888888888914" y="54.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.correo.Mensaje" target="gal.udc.fic.vvs.email.correo.MensajeAbstracto">
+      <point x="0.0" y="-116.0" />
+      <point x="792.625" y="1196.0" />
+      <point x="693.75" y="1196.0" />
+      <point x="44.0" y="14.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.cliente.ClienteImp" target="gal.udc.fic.vvs.email.cliente.Cliente">
+      <point x="0.0" y="-54.0" />
+      <point x="0.0" y="28.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.correo.Reenvio" target="gal.udc.fic.vvs.email.correo.DecoradorMensaje">
+      <point x="0.0" y="-53.5" />
+      <point x="804.5" y="1628.0" />
+      <point x="593.125" y="1628.0" />
+      <point x="102.0" y="191.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.correo.CorreoAbstracto" target="gal.udc.fic.vvs.email.correo.Correo">
+      <point x="0.0" y="-103.5" />
+      <point x="0.0" y="241.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.cliente.ClienteImp.ActionBuscar" target="gal.udc.fic.vvs.email.cliente.ClienteImp">
+      <point x="0.0" y="-41.0" />
+      <point x="0.0" y="54.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.archivo.Texto" target="gal.udc.fic.vvs.email.archivo.Archivo">
+      <point x="0.0" y="-28.0" />
+      <point x="90.0" y="2449.0" />
+      <point x="205.83333333333331" y="2449.0" />
+      <point x="-85.66666666666669" y="78.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.cliente.ClienteImp.ActionArchivar" target="gal.udc.fic.vvs.email.cliente.ClienteImp">
+      <point x="0.0" y="-41.0" />
+      <point x="2816.5" y="2039.0" />
+      <point x="1416.0555555555557" y="2039.0" />
+      <point x="127.55555555555566" y="54.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.cliente.ClienteImp.ActionEstablecerArchivadorDelegado" target="gal.udc.fic.vvs.email.cliente.ClienteImp">
+      <point x="0.0" y="-41.0" />
+      <point x="2204.0" y="2059.0" />
+      <point x="1352.2777777777778" y="2059.0" />
+      <point x="63.77777777777783" y="54.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.correo.CarpetaLimitada" target="gal.udc.fic.vvs.email.correo.CorreoAbstracto">
+      <point x="0.0" y="-191.0" />
+      <point x="0.0" y="103.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.archivo.Imagen" target="gal.udc.fic.vvs.email.archivo.Archivo">
+      <point x="0.0" y="-28.0" />
+      <point x="500.5" y="2449.0" />
+      <point x="377.1666666666667" y="2449.0" />
+      <point x="85.66666666666669" y="78.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.archivador.Log" target="gal.udc.fic.vvs.email.archivador.DecoradorArchivador">
+      <point x="0.0" y="-41.0" />
+      <point x="1477.75" y="463.0" />
+      <point x="1558.25" y="463.0" />
+      <point x="-74.0" y="103.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.cliente.ClienteImp.ActionConsultarEstadoCadena" target="gal.udc.fic.vvs.email.cliente.ClienteImp">
+      <point x="0.0" y="-41.0" />
+      <point x="443.5" y="2049.0" />
+      <point x="1192.8333333333333" y="2049.0" />
+      <point x="-95.66666666666674" y="54.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.correo.DecoradorMensaje" target="gal.udc.fic.vvs.email.correo.MensajeAbstracto">
+      <point x="0.0" y="-191.0" />
+      <point x="491.125" y="1196.0" />
+      <point x="605.75" y="1196.0" />
+      <point x="-44.0" y="14.5" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.cliente.ClienteImp.ActionRaizExplorador" target="gal.udc.fic.vvs.email.cliente.ClienteImp">
+      <point x="0.0" y="-41.0" />
+      <point x="2521.5" y="2049.0" />
+      <point x="1384.1666666666667" y="2049.0" />
+      <point x="95.66666666666674" y="54.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.cliente.ClienteImp.ArchivadorItem" target="gal.udc.fic.vvs.email.cliente.ClienteImp">
+      <point x="0.0" y="-66.5" />
+      <point x="143.0" y="2039.0" />
+      <point x="1160.9444444444443" y="2039.0" />
+      <point x="-127.55555555555566" y="54.0" />
+    </edge>
+    <edge source="gal.udc.fic.vvs.email.cliente.ClienteImp.CorreoItem" target="gal.udc.fic.vvs.email.cliente.ClienteImp">
+      <point x="0.0" y="-54.0" />
+      <point x="692.5" y="2059.0" />
+      <point x="1224.7222222222222" y="2059.0" />
+      <point x="-63.77777777777783" y="54.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.036862745098039" x="1195.625968556895" y="1302.0729298185167" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
