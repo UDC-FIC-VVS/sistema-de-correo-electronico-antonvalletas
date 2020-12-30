@@ -1,16 +1,12 @@
-package gal.udc.fic.vvs.email;
+package gal.udc.fic.vvs.email.correo;
 
 import gal.udc.fic.vvs.email.archivo.Texto;
-import gal.udc.fic.vvs.email.correo.Correo;
-import gal.udc.fic.vvs.email.correo.Mensaje;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-/**
- * Unit test for simple App.
- */
+
 public class MensajeTest {
 	/* Tests the construction of a Mensaje with some content*/
 	@Test
@@ -80,7 +76,7 @@ public class MensajeTest {
 
 	/*test visualizacion*/
 	@Test
-	public void mensajeObtenerVisualizacion() {
+	public void mensajeObtenerVisualizacionTest() {
 		String messageContents = "prueba de contenido de mensaje";
 		String messageContentsName = "nombre del contenido";
 		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
