@@ -8,11 +8,12 @@ import static org.junit.Assert.assertNotNull;
 
 public class CabeceraTest {
 
+	Texto texto = new Texto("contenido", "contenido");
+	Mensaje mensaje = new Mensaje(texto);
+
 	/*tests the constructor for cabecera*/
 	@Test
 	public void cabeceraTest() {
-		Texto texto = new Texto("contenido", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 		Cabecera cabecera = new Cabecera(mensaje, "nombre", "valor");
 		assertNotNull(cabecera);
 	}
@@ -21,15 +22,12 @@ public class CabeceraTest {
 	@Test
 	public void obtenerTamañoTest() {
 		Cabecera cabecera = new Cabecera(new Mensaje(new Texto("contenido", "contenido")), "nombre", "valor");
-		//Super.obtenerTamanho no tiene valor?
 		assertEquals("contenido".length() + "nombre".length() + "valor".length(), cabecera.obtenerTamaño());
 	}
 
 	/*tests the obtener tamanho method from the cabecera class*/
 	@Test
 	public void obtenerVisualizacionTest() {
-		Texto texto = new Texto("contenido", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 		Cabecera cabecera = new Cabecera(mensaje, "nombre", "valor");
 		assertEquals("nombre" + ": " + "valor" + "\n" + mensaje.obtenerVisualizacion(), cabecera.obtenerVisualizacion());
 	}

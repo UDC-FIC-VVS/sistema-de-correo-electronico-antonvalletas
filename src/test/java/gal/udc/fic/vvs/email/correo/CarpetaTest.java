@@ -10,6 +10,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class CarpetaTest {
+
+	Texto texto = new Texto("valor", "contenido");
+	Mensaje mensaje = new Mensaje(texto);
+
 	@Test
 	public void carpetaConstructorTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
@@ -19,8 +23,6 @@ public class CarpetaTest {
 	@Test
 	public void establecerLeidoTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpeta.añadir(mensaje);
@@ -36,8 +38,6 @@ public class CarpetaTest {
 	@Test
 	public void obtenerNoLeidosTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpeta.añadir(mensaje);
@@ -51,8 +51,6 @@ public class CarpetaTest {
 	@Test
 	public void obtenerTamañoTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpeta.añadir(mensaje);
@@ -65,10 +63,7 @@ public class CarpetaTest {
 
 	@Test
 	public void obtenerIconoTest() {
-
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		assertEquals(Correo.ICONO_CARPETA, carpeta.obtenerIcono());
 	}
@@ -76,8 +71,6 @@ public class CarpetaTest {
 	@Test
 	public void obtenerPreVisualizacionTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpeta.añadir(mensaje);
@@ -90,8 +83,6 @@ public class CarpetaTest {
 	@Test
 	public void obtenerVisualizacionTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpeta.añadir(mensaje);
@@ -105,8 +96,6 @@ public class CarpetaTest {
 	@Test
 	public void explorarTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpeta.añadir(mensaje);
@@ -127,8 +116,6 @@ public class CarpetaTest {
 	@Test
 	public void buscarTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpeta.añadir(mensaje);
@@ -145,8 +132,6 @@ public class CarpetaTest {
 	@Test
 	public void añadirTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpeta.añadir(mensaje);
@@ -165,8 +150,6 @@ public class CarpetaTest {
 	@Test
 	public void eliminarTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpeta.añadir(mensaje);
@@ -185,8 +168,6 @@ public class CarpetaTest {
 	@Test
 	public void obtenerHijoTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpeta.añadir(mensaje);

@@ -10,19 +10,19 @@ import static org.junit.Assert.*;
 
 public class CarpetaLimitadaTest {
 
+	Carpeta carpeta = new Carpeta("carpeta1");
+	Texto texto = new Texto("valor", "contenido");
+	Mensaje mensaje = new Mensaje(texto);
+
 	@Test
 	public void carpetaLimitadaConstructorTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
 		assertNotNull(carpetaLimitada);
 	}
 
 	@Test
 	public void establecerLeidoTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -36,10 +36,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void obtenerNoLeidosTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -52,10 +49,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void obtenerTamañoTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -68,7 +62,6 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void obtenerIconoTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
 
 		assertEquals(Correo.ICONO_CARPETA, carpetaLimitada.obtenerIcono());
@@ -76,10 +69,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void obtenerPreVisualizacionTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -91,10 +81,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void obtenerVisualizacionTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -106,10 +93,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void obtenerRutaTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 		try {
 			carpetaLimitada.añadir(mensaje);
 		} catch (OperacionInvalida operacionInvalida) {
@@ -121,10 +105,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void explorarTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -144,10 +125,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void buscarTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -163,10 +141,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void añadirTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -184,10 +159,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void eliminarTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -205,10 +177,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void obtenerHijoTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -226,10 +195,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void obtenerPadreTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);
@@ -241,10 +207,7 @@ public class CarpetaLimitadaTest {
 
 	@Test
 	public void establecerPadreTest() {
-		Carpeta carpeta = new Carpeta("carpeta1");
 		CarpetaLimitada carpetaLimitada = new CarpetaLimitada(carpeta, 5);
-		Texto texto = new Texto("valor", "contenido");
-		Mensaje mensaje = new Mensaje(texto);
 
 		try {
 			carpetaLimitada.añadir(mensaje);

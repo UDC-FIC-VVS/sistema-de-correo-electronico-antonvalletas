@@ -8,11 +8,13 @@ import static org.junit.Assert.assertNotNull;
 
 
 public class MensajeTest {
+
+	String messageContents = "prueba de contenido de mensaje";
+	String messageContentsName = "nombre del contenido";
+
 	/* Tests the construction of a Mensaje with some content*/
 	@Test
 	public void mensajeCreationTest() {
-		String messageContents = "prueba de contenido de mensaje";
-		String messageContentsName = "nombre del contenido";
 		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
 		assertNotNull(mensaje.obtenerVisualizacion());
 	}
@@ -20,8 +22,6 @@ public class MensajeTest {
 	/*Tests getting the read status of a message*/
 	@Test
 	public void mensajeNoLeidoTest() {
-		String messageContents = "prueba de contenido de mensaje";
-		String messageContentsName = "nombre del contenido";
 		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
 		assertEquals(1, mensaje.obtenerNoLeidos());
 	}
@@ -29,8 +29,6 @@ public class MensajeTest {
 	/*Tests getting the read status of a message*/
 	@Test
 	public void mensajeLeidoTest() {
-		String messageContents = "prueba de contenido de mensaje";
-		String messageContentsName = "nombre del contenido";
 		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
 		mensaje.establecerLeido(true);
 		assertEquals(0, mensaje.obtenerNoLeidos());
@@ -40,8 +38,6 @@ public class MensajeTest {
 	/*Tests obtenerTamanho method of Mensaje*/
 	@Test
 	public void mensajeObtenerTamanhoTest() {
-		String messageContents = "prueba de contenido de mensaje";
-		String messageContentsName = "nombre del contenido";
 		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
 		assertEquals(messageContents.length(), mensaje.obtenerTamaño());
 	}
@@ -49,8 +45,6 @@ public class MensajeTest {
 	/*Test icono 1*/
 	@Test
 	public void mensajeObtenerIconoNoLeidoTest() {
-		String messageContents = "prueba de contenido de mensaje";
-		String messageContentsName = "nombre del contenido";
 		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
 		assertEquals(Correo.ICONO_NUEVO_MENSAJE, mensaje.obtenerIcono());
 	}
@@ -58,8 +52,6 @@ public class MensajeTest {
 	/*Test icono 2*/
 	@Test
 	public void mensajeObtenerIconoLeidoTest() {
-		String messageContents = "prueba de contenido de mensaje";
-		String messageContentsName = "nombre del contenido";
 		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
 		mensaje.establecerLeido(true);
 		assertEquals(Correo.ICONO_MENSAJE, mensaje.obtenerIcono());
@@ -68,8 +60,6 @@ public class MensajeTest {
 	/*Test previsualizacion*/
 	@Test
 	public void mensajeObtenerPreVisualizacionTest() {
-		String messageContents = "prueba de contenido de mensaje";
-		String messageContentsName = "nombre del contenido";
 		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
 		assertEquals(messageContents.substring(0, Math.min(messageContents.length(), 32)) + "...", mensaje.obtenerPreVisualizacion());
 	}
@@ -77,8 +67,6 @@ public class MensajeTest {
 	/*test visualizacion*/
 	@Test
 	public void mensajeObtenerVisualizacionTest() {
-		String messageContents = "prueba de contenido de mensaje";
-		String messageContentsName = "nombre del contenido";
 		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
 		assertEquals(messageContents, mensaje.obtenerVisualizacion());
 	}
@@ -86,8 +74,6 @@ public class MensajeTest {
 	/*test buscar*/
 	@Test
 	public void mensajeBuscarTest() {
-		String messageContents = "prueba de contenido de mensaje";
-		String messageContentsName = "nombre del contenido";
 		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
 		assertEquals(mensaje, mensaje.buscar("prueba").toArray()[0]);
 	}
