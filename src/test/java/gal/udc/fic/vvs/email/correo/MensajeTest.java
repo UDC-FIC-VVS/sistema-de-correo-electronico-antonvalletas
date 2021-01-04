@@ -64,6 +64,39 @@ public class MensajeTest {
 		assertEquals(messageContents.substring(0, Math.min(messageContents.length(), 32)) + "...", mensaje.obtenerPreVisualizacion());
 	}
 
+
+	@Test(expected = OperacionInvalida.class)
+	public void explorarTest() throws OperacionInvalida {
+		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
+		mensaje.explorar();
+	}
+
+	@Test(expected = OperacionInvalida.class)
+	public void añadirTest() throws OperacionInvalida {
+		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
+		mensaje.añadir(mensaje);
+	}
+
+	@Test(expected = OperacionInvalida.class)
+	public void eliminarTest() throws OperacionInvalida {
+		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
+		mensaje.eliminar(mensaje);
+	}
+
+	@Test(expected = OperacionInvalida.class)
+	public void obtenerHijoTest() throws OperacionInvalida {
+		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
+		mensaje.obtenerHijo(0);
+	}
+
+	@Test
+	public void obtenerRuta() {
+		Mensaje mensaje = new Mensaje(new Texto(messageContentsName, messageContents));
+		Mensaje mensaje2 = new Mensaje(new Texto(messageContentsName, messageContents));
+		mensaje.establecerPadre(mensaje2);
+		assertEquals(mensaje2.obtenerRuta() + " > " + mensaje.obtenerPreVisualizacion(), mensaje.obtenerRuta());
+	}
+
 	/*test visualizacion*/
 	@Test
 	public void mensajeObtenerVisualizacionTest() {
