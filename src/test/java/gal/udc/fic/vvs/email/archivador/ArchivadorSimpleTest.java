@@ -3,13 +3,16 @@ package gal.udc.fic.vvs.email.archivador;
 import gal.udc.fic.vvs.email.archivo.Texto;
 import gal.udc.fic.vvs.email.correo.Mensaje;
 import org.junit.Test;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import static org.junit.Assert.*;
 
 public class ArchivadorSimpleTest {
 
 	Texto texto = new Texto("valor", "contenido");
+	Texto textoDemasiadoGrande = new Texto("valor", "Este texto es demasiado largo");
 	Mensaje mensaje = new Mensaje(texto);
+	Mensaje mensajeDemasiadoGrande = new Mensaje(textoDemasiadoGrande);
 	String nombreArchivador = "archivadorSimple";
 	int espacioArchivador = 10;
 
@@ -32,6 +35,12 @@ public class ArchivadorSimpleTest {
 	}
 
 	@Test
+	public void almacenarCorreoTest_noSpace() {
+		ArchivadorSimple archivadorSimple = new ArchivadorSimple(nombreArchivador, espacioArchivador);
+		assertFalse(archivadorSimple.almacenarCorreo(mensajeDemasiadoGrande));
+	}
+
+	@Test
 	public void obtenerEspacioTotalTest() {
 		ArchivadorSimple archivadorSimple = new ArchivadorSimple(nombreArchivador, espacioArchivador);
 		assertEquals(espacioArchivador, archivadorSimple.obtenerEspacioTotal());
@@ -45,13 +54,15 @@ public class ArchivadorSimpleTest {
 	}
 
 	@Test
-	public void obtenerDelegado() {
+	public void obtenerDelegadoTest() {
 		ArchivadorSimple archivadorSimple = new ArchivadorSimple(nombreArchivador, espacioArchivador);
 		assertNull(archivadorSimple.obtenerDelegado());
 	}
 
-	@Test
-	public void establecerDelegado() {
-		//Method not implemented in class
+	@Test(expected = NotImplementedException.class)
+	public void establecerDelegadoTest() {
+		ArchivadorSimple archivadorSimple = new ArchivadorSimple(nombreArchivador, espacioArchivador);
+		ArchivadorSimple otroArchivadorSimple = new ArchivadorSimple(nombreArchivador, espacioArchivador);
+		archivadorSimple.establecerDelegado(otroArchivadorSimple);
 	}
 }
