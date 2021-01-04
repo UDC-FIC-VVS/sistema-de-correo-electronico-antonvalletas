@@ -148,6 +148,25 @@ public class CarpetaTest {
 	}
 
 	@Test
+	public void añadirTest_borrarPadre() {
+		Carpeta carpeta = new Carpeta("carpeta1");
+		Carpeta carpeta2 = new Carpeta("carpeta2");
+		mensaje.establecerPadre(carpeta2);
+		try {
+			carpeta.añadir(mensaje);
+		} catch (OperacionInvalida operacionInvalida) {
+			operacionInvalida.printStackTrace();
+		}
+		Correo ans = null;
+		try {
+			ans = carpeta.obtenerHijo(0);
+		} catch (OperacionInvalida operacionInvalida) {
+			operacionInvalida.printStackTrace();
+		}
+		assertEquals(mensaje, ans);
+	}
+
+	@Test
 	public void eliminarTest() {
 		Carpeta carpeta = new Carpeta("carpeta1");
 
