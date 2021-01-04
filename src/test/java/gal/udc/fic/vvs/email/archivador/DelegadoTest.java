@@ -31,6 +31,19 @@ public class DelegadoTest {
 	}
 
 	@Test
+	public void obtenerEspacioDisponibleTest() {
+		Delegado delegado = new Delegado(archivadorSimple);
+		assertEquals(espacioArchivador, delegado.obtenerEspacioDisponible());
+	}
+
+	@Test
+	public void obtenerDelegadoTest() {
+		Delegado delegado = new Delegado(archivadorSimple);
+		delegado.establecerDelegado(archivadorSimple2);
+		assertEquals(archivadorSimple2, delegado.obtenerDelegado());
+	}
+
+	@Test
 	public void obtenerNombreTest() {
 		Delegado delegado = new Delegado(archivadorSimple);
 		assertEquals(nombreArchivador, delegado.obtenerNombre());
@@ -47,12 +60,6 @@ public class DelegadoTest {
 		Delegado delegado = new Delegado(archivadorSimple);
 		delegado.establecerDelegado(archivadorSimple2);
 		assertTrue(delegado.almacenarCorreo(mensajeDemasiadoGrande));
-	}
-
-	@Test
-	public void obtenerDelegadoTest() {
-		Delegado delegado = new Delegado(archivadorSimple);
-		assertNull(delegado.obtenerDelegado());
 	}
 
 	@Test
