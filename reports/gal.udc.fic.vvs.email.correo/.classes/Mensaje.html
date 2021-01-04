@@ -1,0 +1,143 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Mensaje</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">gal.udc.fic.vvs.email.correo</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Mensaje (gal.udc.fic.vvs.email.correo)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Mensaje</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/ 8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (20/ 20)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package gal.udc.fic.vvs.email.correo;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import gal.udc.fic.vvs.email.archivo.Texto;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;import java.util.Collection;
+<i>6</i>&nbsp;import java.util.Vector;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;public class Mensaje extends MensajeAbstracto {
+<i>9</i>&nbsp;
+<b class="fc"><i>10</i>&nbsp;	public Mensaje(Texto contenido) {</b>
+<b class="fc"><i>11</i>&nbsp;		_contenido = contenido;</b>
+<b class="fc"><i>12</i>&nbsp;		_leido = false;</b>
+<b class="fc"><i>13</i>&nbsp;	}</b>
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;	public void establecerLeido(boolean leido) {
+<b class="fc"><i>16</i>&nbsp;		_leido = leido;</b>
+<b class="fc"><i>17</i>&nbsp;	}</b>
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;	public int obtenerNoLeidos() {
+<b class="fc"><i>20</i>&nbsp;		if (_leido) {</b>
+<b class="fc"><i>21</i>&nbsp;			return 0;</b>
+<i>22</i>&nbsp;		} else {
+<b class="fc"><i>23</i>&nbsp;			return 1;</b>
+<i>24</i>&nbsp;		}
+<i>25</i>&nbsp;	}
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;	public int obtenerTamaño() {
+<b class="fc"><i>28</i>&nbsp;		return _contenido.obtenerTamaño();</b>
+<i>29</i>&nbsp;	}
+<i>30</i>&nbsp;
+<i>31</i>&nbsp;	public Integer obtenerIcono() {
+<b class="fc"><i>32</i>&nbsp;		if (_leido) {</b>
+<b class="fc"><i>33</i>&nbsp;			return Correo.ICONO_MENSAJE;</b>
+<i>34</i>&nbsp;		} else {
+<b class="fc"><i>35</i>&nbsp;			return Correo.ICONO_NUEVO_MENSAJE;</b>
+<i>36</i>&nbsp;		}
+<i>37</i>&nbsp;	}
+<i>38</i>&nbsp;
+<i>39</i>&nbsp;	public String obtenerPreVisualizacion() {
+<b class="fc"><i>40</i>&nbsp;		String visualizacion = obtenerVisualizacion();</b>
+<b class="fc"><i>41</i>&nbsp;		return visualizacion.substring(0, Math.min(visualizacion.length(), TAMAÑO_PREVISUALIZACION)) + &quot;...&quot;;</b>
+<i>42</i>&nbsp;	}
+<i>43</i>&nbsp;
+<i>44</i>&nbsp;	public String obtenerVisualizacion() {
+<b class="fc"><i>45</i>&nbsp;		return _contenido.obtenerContenido();</b>
+<i>46</i>&nbsp;	}
+<i>47</i>&nbsp;
+<i>48</i>&nbsp;	public Collection buscar(String busqueda) {
+<b class="fc"><i>49</i>&nbsp;		Vector resultado = new Vector();</b>
+<b class="fc"><i>50</i>&nbsp;		if (obtenerVisualizacion().toLowerCase().matches(&quot;.*&quot; + busqueda.toLowerCase() + &quot;.*&quot;)) {</b>
+<b class="fc"><i>51</i>&nbsp;			resultado.addElement(this);</b>
+<i>52</i>&nbsp;		}
+<b class="fc"><i>53</i>&nbsp;		return resultado;</b>
+<i>54</i>&nbsp;	}
+<i>55</i>&nbsp;
+<i>56</i>&nbsp;	private final static int TAMAÑO_PREVISUALIZACION = 32;
+<i>57</i>&nbsp;	private boolean _leido;
+<i>58</i>&nbsp;	private Texto _contenido;
+<i>59</i>&nbsp;
+<i>60</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-01-04 00:53</div>
+</div>
+</body>
+</html>

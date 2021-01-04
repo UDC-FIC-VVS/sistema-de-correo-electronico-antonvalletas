@@ -1,0 +1,133 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: ArchivadorSimple</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">gal.udc.fic.vvs.email.archivador</a> ]
+</div>
+
+<h1>Coverage Summary for Class: ArchivadorSimple (gal.udc.fic.vvs.email.archivador)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ArchivadorSimple</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (16/ 16)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package gal.udc.fic.vvs.email.archivador;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import gal.udc.fic.vvs.email.correo.Correo;
+<i>4</i>&nbsp;import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;import java.util.Vector;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;public class ArchivadorSimple implements Archivador {
+<i>9</i>&nbsp;
+<b class="fc"><i>10</i>&nbsp;	public ArchivadorSimple(String nombre, int espacio) {</b>
+<b class="fc"><i>11</i>&nbsp;		_nombre = nombre;</b>
+<b class="fc"><i>12</i>&nbsp;		_espacioTotal = espacio;</b>
+<b class="fc"><i>13</i>&nbsp;		_espacioDisponible = espacio;</b>
+<b class="fc"><i>14</i>&nbsp;		_correos = new Vector();</b>
+<b class="fc"><i>15</i>&nbsp;	}</b>
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;	public String obtenerNombre() {
+<b class="fc"><i>18</i>&nbsp;		return _nombre;</b>
+<i>19</i>&nbsp;	}
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;	public boolean almacenarCorreo(Correo correo) {
+<b class="fc"><i>22</i>&nbsp;		if (correo.obtenerTamaño() &lt; _espacioDisponible) {</b>
+<b class="fc"><i>23</i>&nbsp;			_correos.addElement(correo);</b>
+<b class="fc"><i>24</i>&nbsp;			_espacioDisponible -= correo.obtenerTamaño();</b>
+<b class="fc"><i>25</i>&nbsp;			return true;</b>
+<i>26</i>&nbsp;		}
+<b class="fc"><i>27</i>&nbsp;		return false;</b>
+<i>28</i>&nbsp;	}
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;	public int obtenerEspacioTotal() {
+<b class="fc"><i>31</i>&nbsp;		return _espacioTotal;</b>
+<i>32</i>&nbsp;	}
+<i>33</i>&nbsp;
+<i>34</i>&nbsp;	public int obtenerEspacioDisponible() {
+<b class="fc"><i>35</i>&nbsp;		return _espacioDisponible;</b>
+<i>36</i>&nbsp;	}
+<i>37</i>&nbsp;
+<i>38</i>&nbsp;	public Archivador obtenerDelegado() {
+<b class="fc"><i>39</i>&nbsp;		return null;</b>
+<i>40</i>&nbsp;	}
+<i>41</i>&nbsp;
+<i>42</i>&nbsp;	public void establecerDelegado(Archivador archivador) {
+<b class="fc"><i>43</i>&nbsp;		throw new NotImplementedException();</b>
+<i>44</i>&nbsp;	}
+<i>45</i>&nbsp;
+<i>46</i>&nbsp;	private String _nombre;
+<i>47</i>&nbsp;	private int _espacioTotal, _espacioDisponible;
+<i>48</i>&nbsp;	private Vector _correos;
+<i>49</i>&nbsp;
+<i>50</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-01-04 00:53</div>
+</div>
+</body>
+</html>
