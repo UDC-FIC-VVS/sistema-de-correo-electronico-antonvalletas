@@ -1,8 +1,9 @@
 package gal.udc.fic.vvs.email.archivador;
 
-import java.util.Vector;
-
 import gal.udc.fic.vvs.email.correo.Correo;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+import java.util.Vector;
 
 public class ArchivadorSimple implements Archivador {
 
@@ -39,6 +40,7 @@ public class ArchivadorSimple implements Archivador {
 	}
 
 	public void establecerDelegado(Archivador archivador) {
+		throw new NotImplementedException();
 	}
 
 	private String _nombre;
