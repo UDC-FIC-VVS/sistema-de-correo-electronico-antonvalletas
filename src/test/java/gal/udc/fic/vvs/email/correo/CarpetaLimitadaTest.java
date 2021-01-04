@@ -30,7 +30,7 @@ public class CarpetaLimitadaTest {
 			operacionInvalida.printStackTrace();
 		}
 
-		carpeta.establecerLeido(true);
+		carpetaLimitada.establecerLeido(true);
 		assertEquals(0, carpetaLimitada.obtenerNoLeidos());
 	}
 
@@ -88,7 +88,7 @@ public class CarpetaLimitadaTest {
 		} catch (OperacionInvalida operacionInvalida) {
 			operacionInvalida.printStackTrace();
 		}
-		assertEquals("carpeta1" + " (" + "1" + ")", carpetaLimitada.obtenerPreVisualizacion());
+		assertEquals("carpeta1" + " (" + "1" + ")", carpetaLimitada.obtenerVisualizacion());
 	}
 
 	@Test
@@ -132,12 +132,46 @@ public class CarpetaLimitadaTest {
 		} catch (OperacionInvalida operacionInvalida) {
 			operacionInvalida.printStackTrace();
 		}
-		Collection ans = null;
-		ans = carpetaLimitada.buscar("contenido");
+		Collection ans = carpetaLimitada.buscar("contenido");
 		Vector expected = new Vector();
 		expected.add(mensaje);
 		assertEquals(expected, ans);
 	}
+
+	@Test
+	public void buscarTest_2() {
+		CarpetaLimitada carpetaLimitada = null;
+		Mensaje mensaje2 = new Mensaje(texto);
+		Mensaje mensaje3 = new Mensaje(texto);
+		Mensaje mensaje4 = new Mensaje(texto);
+		Mensaje mensaje5 = new Mensaje(texto);
+		Mensaje mensaje6 = new Mensaje(texto);
+		Mensaje mensaje7 = new Mensaje(texto);
+
+		try {
+			carpetaLimitada = new CarpetaLimitada(carpeta, 5);
+			carpetaLimitada.añadir(mensaje);
+			carpetaLimitada.añadir(mensaje2);
+			carpetaLimitada.añadir(mensaje3);
+			carpetaLimitada.añadir(mensaje4);
+			carpetaLimitada.añadir(mensaje5);
+			carpetaLimitada.añadir(mensaje6);
+			carpetaLimitada.añadir(mensaje7);
+
+		} catch (OperacionInvalida operacionInvalida) {
+			operacionInvalida.printStackTrace();
+		}
+		Collection ans = carpetaLimitada.buscar("contenido");
+		Vector expected = new Vector();
+		expected.add(mensaje);
+		expected.add(mensaje2);
+		expected.add(mensaje3);
+		expected.add(mensaje4);
+		expected.add(mensaje5);
+		expected.add(mensaje6);
+		assertEquals(expected, ans);
+	}
+
 
 	@Test
 	public void añadirTest() {
