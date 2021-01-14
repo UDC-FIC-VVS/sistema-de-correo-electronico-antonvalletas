@@ -32,7 +32,7 @@ public class LogTest {
 	}
 
 	@Test
-	public void almacenarCorreo() {
+	public void almacenarCorreoTest() {
 		Log log = new Log(archivadorSimple);
 		assertTrue(log.almacenarCorreo(mensaje));
 	}

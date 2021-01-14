@@ -16,7 +16,7 @@ public class AdjuntoTest {
 
 	/*Tests constructor for adjunto*/
 	@Test
-	public void AdjuntoTest() {
+	public void adjuntoTest() {
 		Adjunto adjunto = new Adjunto(mensaje, texto);
 		assertNotNull(adjunto);
 	}

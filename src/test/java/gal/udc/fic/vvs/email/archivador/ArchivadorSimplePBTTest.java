@@ -2,6 +2,7 @@ package gal.udc.fic.vvs.email.archivador;
 
 
 import com.pholser.junit.quickcheck.Property;
+import com.pholser.junit.quickcheck.generator.InRange;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 import gal.udc.fic.vvs.email.archivo.Texto;
 import gal.udc.fic.vvs.email.correo.Mensaje;
@@ -44,11 +45,11 @@ public class ArchivadorSimplePBTTest {
 	}
 
 	@Property
-	public void obtenerEspacioDisponibleTest(String nombreArchivador, int espacioArchivador, String nombreTexto, String contenidosTexto) {
+	public void obtenerEspacioDisponibleTest(String nombreArchivador, @InRange(minInt = 1) int espacioArchivador, String nombreTexto, String contenidoTexto) {
 		ArchivadorSimple archivadorSimple = new ArchivadorSimple(nombreArchivador, espacioArchivador);
-		Mensaje mensaje = new Mensaje(new Texto(nombreTexto, contenidosTexto));
+		Mensaje mensaje = new Mensaje(new Texto(nombreTexto, contenidoTexto));
 		archivadorSimple.almacenarCorreo(mensaje);
-		if (contenidosTexto.length() <= espacioArchivador) {
+		if (contenidoTexto.length() <= espacioArchivador) {
 			assertEquals(espacioArchivador - mensaje.obtenerTamaño(), archivadorSimple.obtenerEspacioDisponible());
 		} else {
 			assertNotEquals(espacioArchivador - mensaje.obtenerTamaño(), archivadorSimple.obtenerEspacioDisponible());
