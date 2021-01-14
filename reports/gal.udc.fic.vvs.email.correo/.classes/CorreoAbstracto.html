@@ -1,0 +1,129 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: CorreoAbstracto</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">gal.udc.fic.vvs.email.correo</a> ]
+</div>
+
+<h1>Coverage Summary for Class: CorreoAbstracto (gal.udc.fic.vvs.email.correo)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CorreoAbstracto</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (8/ 8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (13/ 13)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package gal.udc.fic.vvs.email.correo;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.Collection;
+<i>4</i>&nbsp;import java.util.Vector;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;public abstract class CorreoAbstracto implements Correo {
+<i>7</i>&nbsp;
+<b class="fc"><i>8</i>&nbsp;    public CorreoAbstracto() {</b>
+<b class="fc"><i>9</i>&nbsp;        _padre = null;</b>
+<b class="fc"><i>10</i>&nbsp;    }</b>
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;    public String obtenerRuta() {
+<b class="fc"><i>13</i>&nbsp;        if (obtenerPadre() != null) {</b>
+<b class="fc"><i>14</i>&nbsp;            return obtenerPadre().obtenerRuta() + &quot; &gt; &quot; + obtenerPreVisualizacion();</b>
+<i>15</i>&nbsp;        } else {
+<b class="fc"><i>16</i>&nbsp;            return obtenerPreVisualizacion();</b>
+<i>17</i>&nbsp;        }
+<i>18</i>&nbsp;    }
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;    public Collection explorar() throws OperacionInvalida {
+<b class="fc"><i>21</i>&nbsp;        throw new OperacionInvalida();</b>
+<i>22</i>&nbsp;    }
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;    public void añadir(Correo correo) throws OperacionInvalida {
+<b class="fc"><i>25</i>&nbsp;        throw new OperacionInvalida();</b>
+<i>26</i>&nbsp;    }
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;    public void eliminar(Correo correo) throws OperacionInvalida {
+<b class="fc"><i>29</i>&nbsp;        throw new OperacionInvalida();</b>
+<i>30</i>&nbsp;    }
+<i>31</i>&nbsp;
+<i>32</i>&nbsp;    public Correo obtenerHijo(int n) throws OperacionInvalida {
+<b class="fc"><i>33</i>&nbsp;        throw new OperacionInvalida();</b>
+<i>34</i>&nbsp;    }
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;    public Correo obtenerPadre() {
+<b class="fc"><i>37</i>&nbsp;        return _padre;</b>
+<i>38</i>&nbsp;    }
+<i>39</i>&nbsp;
+<i>40</i>&nbsp;    protected void establecerPadre(Correo padre) {
+<b class="fc"><i>41</i>&nbsp;        _padre = padre;</b>
+<b class="fc"><i>42</i>&nbsp;    }</b>
+<i>43</i>&nbsp;
+<i>44</i>&nbsp;    private Correo _padre;
+<i>45</i>&nbsp;
+<i>46</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-01-14 14:32</div>
+</div>
+</body>
+</html>

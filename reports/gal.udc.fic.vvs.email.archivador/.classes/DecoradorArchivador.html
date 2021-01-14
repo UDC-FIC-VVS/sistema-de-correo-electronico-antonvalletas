@@ -1,0 +1,120 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: DecoradorArchivador</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">gal.udc.fic.vvs.email.archivador</a> ]
+</div>
+
+<h1>Coverage Summary for Class: DecoradorArchivador (gal.udc.fic.vvs.email.archivador)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">DecoradorArchivador</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/ 10)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package gal.udc.fic.vvs.email.archivador;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import gal.udc.fic.vvs.email.correo.Correo;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;public abstract class DecoradorArchivador implements Archivador {
+<i>6</i>&nbsp;
+<b class="fc"><i>7</i>&nbsp;    public DecoradorArchivador(Archivador decorado) {</b>
+<b class="fc"><i>8</i>&nbsp;        _decorado = decorado;</b>
+<b class="fc"><i>9</i>&nbsp;    }</b>
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;    public String obtenerNombre() {
+<b class="fc"><i>12</i>&nbsp;        return _decorado.obtenerNombre();</b>
+<i>13</i>&nbsp;    }
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;    public boolean almacenarCorreo(Correo correo) {
+<b class="fc"><i>16</i>&nbsp;        return _decorado.almacenarCorreo(correo);</b>
+<i>17</i>&nbsp;    }
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;    public int obtenerEspacioTotal() {
+<b class="fc"><i>20</i>&nbsp;        return _decorado.obtenerEspacioTotal();</b>
+<i>21</i>&nbsp;    }
+<i>22</i>&nbsp;
+<i>23</i>&nbsp;    public int obtenerEspacioDisponible() {
+<b class="fc"><i>24</i>&nbsp;        return _decorado.obtenerEspacioDisponible();</b>
+<i>25</i>&nbsp;    }
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    public Archivador obtenerDelegado() {
+<b class="fc"><i>28</i>&nbsp;        return _decorado.obtenerDelegado();</b>
+<i>29</i>&nbsp;    }
+<i>30</i>&nbsp;
+<i>31</i>&nbsp;    public void establecerDelegado(Archivador archivador) {
+<b class="fc"><i>32</i>&nbsp;        _decorado.establecerDelegado(archivador);</b>
+<b class="fc"><i>33</i>&nbsp;    }</b>
+<i>34</i>&nbsp;
+<i>35</i>&nbsp;    private Archivador _decorado;
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2021-01-14 14:32</div>
+</div>
+</body>
+</html>
