@@ -110,6 +110,7 @@ public class CarpetaPBTTest {
 		assertEquals(expected, ans);
 	}
 
+
 	@Property
 	public void añadirTest(String nombre, String contenido) {
 		Texto texto = new Texto(nombre, contenido);
